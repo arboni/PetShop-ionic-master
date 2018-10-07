@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Endereco</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+<ion-list>
+  <button ion-item *ngFor="let item of items">
+    <ion-thumbnail item-start>
+      <img src="../../assets/imgs/pt.png">
+    </ion-thumbnail>
+    <h2>{{item.id}}</h2>
+    <p> {{item.logradouro.toString}} {{item.numero.toString}}</p>
+    <p> {{item.complemento.toString}} {{item.cep.toString}}</p>
+  </button>
+</ion-list>
+</ion-content>
+
+
